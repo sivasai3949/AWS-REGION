@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAAVI-AI</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="icon" href="/static/favicon.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="chatbot-container">
+        <header>
+            <img src="/static/nav_logo.svg" alt="logo Icon" class="logo-icon">
+            <img src="/static/chatbot4.gif" alt="Robot Icon" class="robot-icon">
+        </header>
+        <div class="chat-container" id="chat-container">
+            {% if intro_message %}
+                <div class="chat">
+                    <div class="chat-bubble robot">{{ intro_message }}</div>
+                </div>
+            {% endif %}
+        </div>
+        <div class="input-container" id="input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <!-- Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
